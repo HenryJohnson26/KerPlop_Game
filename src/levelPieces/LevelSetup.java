@@ -18,7 +18,7 @@ public class LevelSetup {
 	}
 	
 	public void createLevel(int levelNum) {
-		//TODO:
+		//TODO: create the level 
 	}
 	
 	public Drawable[] getBoard() {
