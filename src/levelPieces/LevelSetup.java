@@ -9,13 +9,15 @@ import gameEngine.Moveable;
 public class LevelSetup {
 	
 	private ArrayList<Moveable> movingPieces;
-	private Drawable[] gameBoard = new Drawable[GameEngine.BOARD_SIZE];
+	private Drawable[] gameBoard;
 	private ArrayList<GamePiece> gamePieces;
 	private int playerStartLoc = GameEngine.BOARD_SIZE/2;
 	
 	public LevelSetup() {
 		//TODO: initialize instance data as needed
-
+		movingPieces = new ArrayList<>();
+		gamePieces = new ArrayList<>();
+		gameBoard = new Drawable[GameEngine.BOARD_SIZE];
 	}
 	
 	public void createLevel(int levelNum) {
@@ -27,6 +29,15 @@ public class LevelSetup {
 		//long line: sniper
 		//wrongly spelled name: doormat
 		//plastic straw: kills immediately
+		Barista barista = new Barista('b', "barista", GameEngine.BOARD_SIZE%2);
+		movingPieces.add(barista);
+		gamePieces.add(barista);
+		gameBoard[barista.getLocation()] = barista;
+		RandomMotionPiece longLine = new RandomMotionPiece('L', "Long Line", GameEngine.BOARD_SIZE-2);
+		movingPieces.add(longLine);
+		gamePieces.add(longLine);
+		gameBoard[longLine.getLocation()] = longLine;
+
 	}
 	
 	public Drawable[] getBoard() {
