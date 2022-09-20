@@ -1,0 +1,33 @@
+I, Henry Johnson, certify that I partiI, Henry Johnson participated equitably in the creation of assignment KerPlop, dated 9/19/2022.
+I, Taylor Klone, certify that I pI, Taylor Klone participated equitably in the creation of this assignment KerPlop, dated 9/19/2022.
+
+commit fa0c3fd226654cbf7aad5e8faf0f6cb0ec20d0b1 (HEAD -> master, origin/master)
+Author: HenryJohnson26 <108373639+HenryJohnson26@users.noreply.github.com>
+Date:   Mon Sep 19 23:21:17 2022 -0600
+
+    Added more characters and another level, finished interactions
+
+commit a67b88d2838f4710822ebdb0837408c69389dc15
+Author: HenryJohnson26 <108373639+HenryJohnson26@users.noreply.github.com>
+Date:   Mon Sep 19 19:26:33 2022 -0600
+
+    made movement code for barista and LongLine
+
+commit d47d0a5e2028aace122b6b9ac11a35d4509739d6
+Author: HenryJohnson26 <108373639+HenryJohnson26@users.noreply.github.com>
+Date:   Sun Sep 18 17:06:21 2022 -0600
+
+    updated barista's move and interact methods
+
+commit 4d61ea224852dca560fdf57e2a7fceccb26a250e
+Author: HenryJohnson26 <108373639+HenryJohnson26@users.noreply.github.com>
+Date:   Sun Sep 18 16:53:22 2022 -0600
+
+    added enemie files and removed minion file
+
+commit 981b255fc57bcbc648413d5b5f05042ab3eacefe
+Author: HenryJohnson26 <108373639+HenryJohnson26@users.noreply.github.com>
+Date:   Thu Sep 15 13:58:21 2022 -0600
+
+    made ideas for characters and began level setup
+:

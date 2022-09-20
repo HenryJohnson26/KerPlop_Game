@@ -1,0 +1,5 @@
+How this all comes together can be easily seen in the uml, and also here
+the idea is that you have walked into a starbucks, and are met with the usuals
+they become your enemies. Some enemies extend Gamepiece so that they interackt, some
+implement drawable so they can be printed and some impliment moveable so they can move.
+each interact in different ways.
