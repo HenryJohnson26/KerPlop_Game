@@ -21,8 +21,15 @@ public class Barista extends GamePiece implements Moveable, Drawable {
     @Override
     public void move(Drawable[] gameBoard, int playerLocation) {
         //moves one piece at a time torwards the player
-        if(getLocation()<playerLocation)setLocation(getLocation()+1);
-        else setLocation(getLocation()-1);
+        gameBoard[getLocation()]=null;
+        if(getLocation()<playerLocation){
+            setLocation(getLocation()+1);
+
+        }
+        else{
+            setLocation(getLocation()-1);
+        }
+        gameBoard[getLocation()] = this;
     }
 
     @Override
@@ -31,3 +38,5 @@ public class Barista extends GamePiece implements Moveable, Drawable {
         return null;
     }
 }
+
+

@@ -33,7 +33,7 @@ public class LevelSetup {
 		movingPieces.add(barista);
 		gamePieces.add(barista);
 		gameBoard[barista.getLocation()] = barista;
-		RandomMotionPiece longLine = new RandomMotionPiece('L', "Long Line", GameEngine.BOARD_SIZE-2);
+		LongLine longLine = new LongLine('L', "Long Line", GameEngine.BOARD_SIZE-2);
 		movingPieces.add(longLine);
 		gamePieces.add(longLine);
 		gameBoard[longLine.getLocation()] = longLine;
