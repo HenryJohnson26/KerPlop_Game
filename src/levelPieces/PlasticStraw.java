@@ -1,8 +1,11 @@
 package levelPieces;
 
 import gameEngine.Drawable;
+import gameEngine.GameEngine;
 import gameEngine.InteractionResult;
 import gameEngine.Moveable;
+
+import java.util.Random;
 
 public class PlasticStraw extends GamePiece implements Moveable, Drawable {
     /**
@@ -12,6 +15,7 @@ public class PlasticStraw extends GamePiece implements Moveable, Drawable {
      * @param label    TODO
      * @param location initial location
      */
+    private Random r = new Random();
     public PlasticStraw(char symbol, String label, int location) {
         super(symbol, label, location);
     }
@@ -19,10 +23,17 @@ public class PlasticStraw extends GamePiece implements Moveable, Drawable {
     @Override
     public void move(Drawable[] gameBoard, int playerLocation) {
         //moves randomly
+        int position = r.nextInt(GameEngine.BOARD_SIZE);
+        gameBoard[getLocation()] = null;
+        gameBoard[position] = this;
     }
 
     @Override
     public InteractionResult interact(Drawable[] gameBoard, int playerLocation) {
-        return null;
+        //hits if within one
+        if(Math.abs(playerLocation-getLocation())==1){
+            return InteractionResult.HIT;
+        }
+        return InteractionResult.NONE;
     }
 }

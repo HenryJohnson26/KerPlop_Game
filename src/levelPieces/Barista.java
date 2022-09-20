@@ -35,7 +35,7 @@ public class Barista extends GamePiece implements Moveable, Drawable {
     @Override
     public InteractionResult interact(Drawable[] gameBoard, int playerLocation) {
         if(Math.abs(playerLocation-getLocation())==1)return InteractionResult.HIT;
-        return null;
+        return InteractionResult.NONE;
     }
 }
 

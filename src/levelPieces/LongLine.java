@@ -26,13 +26,11 @@ public class LongLine extends GamePiece implements Moveable, Drawable {
                 if (getLocation() + 2 < GameEngine.BOARD_SIZE) {
                     setLocation(getLocation() + 2);
                 } else {
-                    setLocation(getLocation() + 1);
                 }
             } else if (getLocation() > playerLocation) {
                 if (getLocation() - 2 > 0) {
                     setLocation(getLocation() - 2);
                 } else {
-                    setLocation(getLocation() - 1);
                 }
             }
         }
@@ -41,6 +39,9 @@ public class LongLine extends GamePiece implements Moveable, Drawable {
 
     @Override
     public InteractionResult interact(Drawable[] gameBoard, int playerLocation) {
-        return null;
+        //kills if within 1
+        //find player or long line
+        if(Math.abs(playerLocation-getLocation())==1)return InteractionResult.KILL;
+        return InteractionResult.NONE;
     }
 }

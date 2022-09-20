@@ -11,12 +11,21 @@ public class WrongName extends GamePiece implements Drawable {
      * @param label    TODO
      * @param location initial location
      */
+    //number of turns taken close to wrong name
+    private int time = 0;
     public WrongName(char symbol, String label, int location) {
         super(symbol, label, location);
     }
 
     @Override
     public InteractionResult interact(Drawable[] gameBoard, int playerLocation) {
-        return null;
+        //kills if you spend three turns close to it
+        if(Math.abs(getLocation()-playerLocation)==1){
+            time ++;
+        }
+        if(time>=3){
+            return InteractionResult.KILL;
+        }
+        return InteractionResult.NONE;
     }
 }
