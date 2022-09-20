@@ -96,7 +96,9 @@ public class GameEngine {
 		System.out.println("The object of the game is to capture prizes without being killed.");
 		System.out.println("Baristas: B will hit within one");
 		System.out.println("Cake Pops do nothing");
-		System.out.println("Plastic straws multiply and will kill if you spend too much time close to them");
+		System.out.println("Plastic straws multiply and will deal damage if you get too close");
+		System.out.println("Wrong Names will kill if you spend to much time near them");
+		System.out.println("get the Pumpkin spice lattes (X) to win and advance");
 		System.out.println("long lines will kill if they are within 1 of you");
 		System.out.println("You need " + Player.POINTS_TO_ADVANCE + 
 				" points to advance, you die after " + Player.POINTS_TO_DIE + " hits.") ;
