@@ -24,6 +24,7 @@ public class WrongName extends GamePiece implements Drawable {
             time ++;
         }
         if(time>=3){
+        	
             return InteractionResult.KILL;
         }
         return InteractionResult.NONE;
