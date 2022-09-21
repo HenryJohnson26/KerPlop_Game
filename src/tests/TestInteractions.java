@@ -11,6 +11,7 @@ import levelPieces.Barista;
 import levelPieces.CakePop;
 import levelPieces.LongLine;
 import levelPieces.PlasticStraw;
+import levelPieces.PumpkinSpiceLatte;
 import levelPieces.WrongName;
 
 class TestInteractions {
@@ -66,7 +67,26 @@ class TestInteractions {
 		WrongName hoonrie = new WrongName('W', "label", 10);
 		
 		gameBoard[10] = hoonrie;
+<<<<<<< HEAD
 		assertEquals(InteractionResult.NONE, hoonrie.interact(gameBoard, 11))
+=======
+		assertEquals(InteractionResult.NONE, hoonrie.interact(gameBoard, 10));
+		assertEquals(InteractionResult.NONE, hoonrie.interact(gameBoard, 10));
+		assertEquals(InteractionResult.KILL, hoonrie.interact(gameBoard, 10));
+
+	}
+	
+	@Test
+	public void testPSL () {
+		Drawable [] gameBoard = new Drawable[GameEngine.BOARD_SIZE];
+		PumpkinSpiceLatte psl = new PumpkinSpiceLatte('P', "label", 10);
+		
+		gameBoard[10] = psl;
+		
+		assertEquals(InteractionResult.GET_POINT, psl.interact(gameBoard, 0));
+		assertEquals(InteractionResult.NONE, psl.interact(gameBoard,11));
+		
+>>>>>>> 39072403f6097d37dcf4d5b8f9cc9859d07806d6
 	}
 	
 }
