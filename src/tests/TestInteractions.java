@@ -66,7 +66,7 @@ class TestInteractions {
 		WrongName hoonrie = new WrongName('W', "label", 10);
 		
 		gameBoard[10] = hoonrie;
-		assertEquals(InteractionResult.KILL, )
+		assertEquals(InteractionResult.NONE, hoonrie.interact(gameBoard, 11))
 	}
 	
 }

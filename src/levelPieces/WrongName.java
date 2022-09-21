@@ -28,4 +28,5 @@ public class WrongName extends GamePiece implements Drawable {
         }
         return InteractionResult.NONE;
     }
+
 }
