@@ -24,6 +24,10 @@ public class PlasticStraw extends GamePiece implements Moveable, Drawable {
     public void move(Drawable[] gameBoard, int playerLocation) {
         //moves randomly
         int position = r.nextInt(GameEngine.BOARD_SIZE);
+        while(gameBoard[position]!=null||position == playerLocation) {
+        	position = r.nextInt(GameEngine.BOARD_SIZE);
+        }
+        setLocation(position);
         gameBoard[getLocation()] = null;
         gameBoard[position] = this;
     }

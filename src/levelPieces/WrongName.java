@@ -29,5 +29,9 @@ public class WrongName extends GamePiece implements Drawable {
         }
         return InteractionResult.NONE;
     }
+    
+    public void setTime(int time) {
+    	this.time = time;
+    }
 
 }

@@ -9,6 +9,9 @@ public class CakePop implements Drawable {
         this.symbol = symbol;
         this.location = location;
     }
+    public CakePop() {
+    	
+    }
     @Override
     public void draw() {
         System.out.print(symbol);

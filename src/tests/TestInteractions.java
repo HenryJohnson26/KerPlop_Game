@@ -17,11 +17,6 @@ import levelPieces.WrongName;
 class TestInteractions {
 
 	@Test
-	void test() {
-		fail("Not yet implemented");
-	}
-
-	@Test
 	public void testBarista() {
 		Drawable [] gameBoard = new Drawable[GameEngine.BOARD_SIZE];
 		Barista Tessa = new Barista('B', "label", 10);
@@ -67,11 +62,12 @@ class TestInteractions {
 		WrongName hoonrie = new WrongName('W', "label", 10);
 		
 		gameBoard[10] = hoonrie;
-<<<<<<< HEAD
-		assertEquals(InteractionResult.NONE, hoonrie.interact(gameBoard, 11))
-=======
+
+		assertEquals(InteractionResult.NONE, hoonrie.interact(gameBoard, 11));
+
 		assertEquals(InteractionResult.NONE, hoonrie.interact(gameBoard, 10));
 		assertEquals(InteractionResult.NONE, hoonrie.interact(gameBoard, 10));
+		hoonrie.setTime(3);
 		assertEquals(InteractionResult.KILL, hoonrie.interact(gameBoard, 10));
 
 	}
@@ -83,10 +79,9 @@ class TestInteractions {
 		
 		gameBoard[10] = psl;
 		
-		assertEquals(InteractionResult.GET_POINT, psl.interact(gameBoard, 0));
+		assertEquals(InteractionResult.GET_POINT, psl.interact(gameBoard, 10));
 		assertEquals(InteractionResult.NONE, psl.interact(gameBoard,11));
 		
->>>>>>> 39072403f6097d37dcf4d5b8f9cc9859d07806d6
 	}
 	
 }
